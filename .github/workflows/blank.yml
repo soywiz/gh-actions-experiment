@@ -29,7 +29,7 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
 
-      - { name: Download, shell: cmd, run: "wget https://github.com/korlibs/mesa-dist-win/releases/download/21.2.3/opengl32-x64.zip" }
+      - { name: Download, shell: cmd, run: "curl https://github.com/korlibs/mesa-dist-win/releases/download/21.2.3/opengl32-x64.zip --output opengl32-x64.zip" }
       - { name: unzip, shell: cmd, run: "unzip opengl32-x64.zip" }
       - { name: Dir, shell: cmd, run: dir }
 
